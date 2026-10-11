@@ -30,10 +30,11 @@ import lombok.ToString;
 @RequiredArgsConstructor
 @Builder
 @EqualsAndHashCode
-@ToString(onlyExplicitlyIncluded = true)
-public final class PrincipalUserAuthCredentialsData {
+@ToString
+public final class PrincipalUserAuthDataCommandData {
 
+    private final Long id;
     private final UUID publicId;
+    private final Long fineractClientId;
     private final boolean bound;
-    private final String passwordHash;
 }
